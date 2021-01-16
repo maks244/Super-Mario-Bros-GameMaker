@@ -1,0 +1,133 @@
+Converting GML script: ${project_dir}\scripts\allow_player_movement\allow_player_movement.gml
+Converted builtin - line 51: view_xview -> __view_get( e__VW.XView, 0 )
+Converted string - line 2: 'W' -> "W"
+Converted string - line 3: 'S' -> "S"
+Converted string - line 4: 'D' -> "D"
+Converted string - line 5: 'A' -> "A"
+Converted string - line 6: 'E' -> "E"
+
+Font SMB has been converted to font family Press Start 2P (Regular)
+Font has no texture in GameMaker Studio 1 project, forced to regenerate
+Font texture has been regenerated - inconsistencies may occur
+Converting GML script: ${project_dir}\objects\obj_goomba\Create_0.gml
+Converted description /// @description  Variables
+Converted string - line 5: 'DEACTIVATED' -> "DEACTIVATED"
+
+Converting GML script: ${project_dir}\objects\obj_goomba\Step_0.gml
+Converted string - line 7: 'DEACTIVATED' -> "DEACTIVATED"
+Converted string - line 19: 'WALK' -> "WALK"
+Converted string - line 39: 'DEAD' -> "DEAD"
+Converted string - line 87: 'WALK' -> "WALK"
+Converted string - line 105: 'WALK' -> "WALK"
+
+Converting GML script: ${project_dir}\objects\obj_player\Create_0.gml
+Converted description /// @description  Variables
+Converted string - line 29: 'IDLE' -> "IDLE"
+Converted string - line 31: 'JUMPING' -> "JUMPING"
+Converted string - line 35: 'IDLE' -> "IDLE"
+Converted string - line 37: 'RIGHT' -> "RIGHT"
+
+Converting GML script: ${project_dir}\objects\obj_player\Step_0.gml
+Converted builtin - line 35: view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 365: view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 373: view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 369: view_xview += hsp -> __view_set( e__VW.XView, 0, __view_get( e__VW.XView, 0 ) + (hsp) )
+Converted builtin - line 365: view_wview -> __view_get( e__VW.WView, 0 )
+Converted string - line 7: 'IDLE' -> "IDLE"
+Converted string - line 11: 'RIGHT' -> "RIGHT"
+Converted string - line 13: 'LEFT' -> "LEFT"
+Converted string - line 17: 'IDLE' -> "IDLE"
+Converted string - line 29: 'JUMPING' -> "JUMPING"
+Converted string - line 31: 'RIGHT' -> "RIGHT"
+Converted string - line 35: 'LEFT' -> "LEFT"
+Converted string - line 43: 'RIGHT' -> "RIGHT"
+Converted string - line 47: 'RIGHT' -> "RIGHT"
+Converted string - line 49: 'RIGHT' -> "RIGHT"
+Converted string - line 69: 'JUMPING' -> "JUMPING"
+Converted string - line 71: 'LEFT' -> "LEFT"
+Converted string - line 73: 'IDLE' -> "IDLE"
+Converted string - line 81: 'LEFT' -> "LEFT"
+Converted string - line 85: 'LEFT' -> "LEFT"
+Converted string - line 87: 'LEFT' -> "LEFT"
+Converted string - line 107: 'JUMPING' -> "JUMPING"
+Converted string - line 109: 'RIGHT' -> "RIGHT"
+Converted string - line 111: 'IDLE' -> "IDLE"
+Converted string - line 119: 'JUMPING' -> "JUMPING"
+Converted string - line 123: 'LEFT' -> "LEFT"
+Converted string - line 125: 'RIGHT' -> "RIGHT"
+Converted string - line 183: 'DEAD' -> "DEAD"
+Converted string - line 323: 'DEAD' -> "DEAD"
+Converted string - line 335: 'DEAD' -> "DEAD"
+Converted string - line 351: 'DEAD' -> "DEAD"
+
+Converting GML script: ${project_dir}\objects\obj_player\Other_4.gml
+Converted builtin - line 15: Level_1_1.view_xview = 2576 -> __view_set( e__VW.XView, 0, 2576 )
+
+Converting GML script: ${project_dir}\objects\obj_kill_block\Collision_c1abd8a9-b178-4049-ad3e-bb1f9469b9c9.gml
+Converted string - line 1: 'DEAD' -> "DEAD"
+
+Converting GML script: ${project_dir}\objects\draw_static_hud\Draw_0.gml
+Converted builtin - line 1: view_xview -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 1: view_yview -> __view_get( e__VW.YView, 0 )
+
+Converting GML script: ${project_dir}\objects\draw_remaining_time\Create_0.gml
+Converted builtin - line 7: view_xview -> __view_get( e__VW.XView, 0 )
+
+Converting GML script: ${project_dir}\objects\draw_remaining_time\Alarm_0.gml
+Converted string - line 3: 'DEAD' -> "DEAD"
+Converted string - line 3: 'ENTERING_PIPE' -> "ENTERING_PIPE"
+Converted string - line 3: 'EXITING_PIPE' -> "EXITING_PIPE"
+
+Converting GML script: ${project_dir}\objects\draw_remaining_time\Step_0.gml
+Converted builtin - line 3: view_xview -> __view_get( e__VW.XView, 0 )
+Converted string - line 23: 'DEAD' -> "DEAD"
+
+Converting GML script: ${project_dir}\objects\draw_remaining_time\Draw_0.gml
+Converted string - line 13: '0' -> "0"
+Converted string - line 25: '0' -> "0"
+Converted string - line 27: '0' -> "0"
+
+Converting GML script: ${project_dir}\objects\obj_block_coin\Alarm_2.gml
+Converted string - line 1: '200' -> "200"
+
+Converting GML script: ${project_dir}\objects\menu_mushroom\Create_0.gml
+Converted string - line 1: 'UP' -> "UP"
+
+Converting GML script: ${project_dir}\objects\menu_mushroom\Step_0.gml
+Converted string - line 3: 'E' -> "E"
+Converted string - line 13: 'UP' -> "UP"
+Converted string - line 17: 'DOWN' -> "DOWN"
+Converted string - line 27: 'UP' -> "UP"
+Converted string - line 41: 'UP' -> "UP"
+
+Missing audiogroup for sound: 'OverworldTheme' - setting to default audio group
+Missing audiogroup for sound: 'UndergroundTheme' - setting to default audio group
+Missing audiogroup for sound: 'HurryOverworldTheme' - setting to default audio group
+Missing audiogroup for sound: 'HurryUndergroundTheme' - setting to default audio group
+Missing audiogroup for sound: 'StarPower' - setting to default audio group
+Missing audiogroup for sound: 'Jump' - setting to default audio group
+Missing audiogroup for sound: 'HurryUp' - setting to default audio group
+Missing audiogroup for sound: 'Death' - setting to default audio group
+Missing audiogroup for sound: 'Flagpole' - setting to default audio group
+Missing audiogroup for sound: 'CoinCount' - setting to default audio group
+Missing audiogroup for sound: 'GameOver' - setting to default audio group
+Missing audiogroup for sound: 'Coin' - setting to default audio group
+Missing audiogroup for sound: 'OneUp' - setting to default audio group
+Missing audiogroup for sound: 'Pipe' - setting to default audio group
+Missing audiogroup for sound: 'PowerupCollect' - setting to default audio group
+Missing audiogroup for sound: 'EnemyStomp' - setting to default audio group
+Missing audiogroup for sound: 'PowerupAppears' - setting to default audio group
+Game speed set to 60
+Added compatibility script 'action/action_snap.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'sound/sound_play.gml'
+Added compatibility script 'sound/sound_stop.gml'
+Added compatibility script 'sound/sound_stop_all.gml'
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script 'view/__view_set.gml'
+Added compatibility script 'view/__view_set_internal.gml'
+Added compatibility script 'action/__init_action.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'
