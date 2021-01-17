@@ -14,7 +14,7 @@ jumpTime = 0
 // Animation
 if (place_meeting(x, y+1, parent_solid)) state = "IDLE"
 else state = "JUMPING"
-animationSpeed = 0.2
+animationSpeed = 0.5
 last_state = "IDLE"
 last_direction = "RIGHT"
 death_timer = 0
@@ -29,4 +29,6 @@ global.powerup_state = 0
 // Create follower
 instance_create_depth(x, y, 1, obj_follower)
 
+// Other
+game_paused = false
 

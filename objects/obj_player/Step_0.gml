@@ -1,3 +1,9 @@
+// Stop if game is paused
+if (global.game_paused)
+{
+	image_speed = 0
+	exit
+}
 // Main actions
 switch(state)
 {
@@ -26,7 +32,7 @@ switch(state)
         last_direction = "RIGHT"
         if (hsp < -0.4) sprite_index = spr_s_mario_stop_r
         else sprite_index = spr_s_mario_walk_r
-        image_speed = (abs(hsp))/maxSpeed * animationSpeed
+        image_speed = (abs(hsp))/4 * animationSpeed
         jump_sound_played = 2
 		
         allow_player_movement()
@@ -45,7 +51,7 @@ switch(state)
         last_direction = "LEFT"
         if (hsp > 0.4) sprite_index = spr_s_mario_stop_l
         else sprite_index = spr_s_mario_walk_l
-        image_speed = (abs(hsp))/maxSpeed * animationSpeed
+        image_speed = (abs(hsp))/4 * animationSpeed
         jump_sound_played = 2
 		
         allow_player_movement()
@@ -72,11 +78,8 @@ switch(state)
             jumpTime += 1
             if (jumpTime < 12) vsp = -jumpSpeed
         }
-        else
-        {
-            jumpTime = 20
-        }
-		
+        else jumpTime = 20
+
         if (place_meeting(x, y+1, parent_solid))
         {
             jumpTime = 0
@@ -100,6 +103,7 @@ switch(state)
             hsp = 0
             vsp = 0
             sprite_index = spr_mario_dead
+			depth = -100
             audio_stop_all()
             audio_play_sound(Death, 1, false)
         }
@@ -187,9 +191,25 @@ if (place_meeting(x, y, parent_enemy))
 // Room and HUD view control
 if (room = Level_1_1)
 {
-    if (x < 3228) if (x > (__view_get(e__VW.XView, 0) + (__view_get(e__VW.WView, 0) * 0.36))) && (sign(hsp) = 1)
+	if (x < 3228) && (x > (__view_get(e__VW.XView, 0) + (__view_get(e__VW.WView, 0) * 0.475))) && (sign(hsp) = 1)
+	{
+		__view_set(e__VW.XView, 0, __view_get(e__VW.XView, 0)+(hsp))
+	}
+	else if (x < 3228) && (x > (__view_get(e__VW.XView, 0) + (__view_get(e__VW.WView, 0) * 0.45))) && (sign(hsp) = 1)
     {
-        __view_set(e__VW.XView, 0, __view_get(e__VW.XView, 0)+(hsp))
+        __view_set(e__VW.XView, 0, __view_get(e__VW.XView, 0)+(hsp/1.125))
+    }
+	else if (x < 3228) && (x > (__view_get(e__VW.XView, 0) + (__view_get(e__VW.WView, 0) * 0.42))) && (sign(hsp) = 1)
+    {
+        __view_set(e__VW.XView, 0, __view_get(e__VW.XView, 0)+(hsp/1.25))
+    }
+	else if (x < 3228) && (x > (__view_get(e__VW.XView, 0) + (__view_get(e__VW.WView, 0) * 0.39))) && (sign(hsp) = 1)
+    {
+        __view_set(e__VW.XView, 0, __view_get(e__VW.XView, 0)+(hsp/1.375))
+    }
+    else if (x < 3228) && (x > (__view_get(e__VW.XView, 0) + (__view_get(e__VW.WView, 0) * 0.36))) && (sign(hsp) = 1)
+    {
+        __view_set(e__VW.XView, 0, __view_get(e__VW.XView, 0)+(hsp/1.5))
     }
     if (x <= (__view_get( e__VW.XView, 0 ) + 8) && (sign(hsp) = -1)) hsp = 0
 }

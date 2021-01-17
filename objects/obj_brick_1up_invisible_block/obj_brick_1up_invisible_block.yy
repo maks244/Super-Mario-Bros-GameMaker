@@ -22,7 +22,10 @@
   "physicsFriction": 0.2,
   "physicsStartAwake": true,
   "physicsKinematic": false,
-  "physicsShapePoints": [],
+  "physicsShapePoints": [
+    {"x":8.0,"y":8.0,},
+    {"x":8.0,"y":8.0,},
+  ],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_brick_1up_invisible_block","path":"objects/obj_brick_1up_invisible_block/obj_brick_1up_invisible_block.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_brick_1up_invisible_block","path":"objects/obj_brick_1up_invisible_block/obj_brick_1up_invisible_block.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},

@@ -1,0 +1,11 @@
+ToDo:
+- Add Score
+- Add Top score
+- Add Powerups
+- Add Damage
+- Add Flagpole animation and win
+- Change kill block to: check y level
+- Fix weird sounding hurry up music
+- Fix hud and coin blocks going out of sync when pausing the game
+- Stop coin animation when pausing the game (idea: instead of alarm use timer)
+- Add Controls instructions at start

@@ -5,5 +5,5 @@ global.total_coins = 0
 global.total_score = 0
 global.top_score = 0
 global.exiting_bonus = false
-
+global.game_paused = false
 

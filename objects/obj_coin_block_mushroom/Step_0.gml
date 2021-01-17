@@ -1,3 +1,11 @@
+// Stop if game is paused
+if (global.game_paused)
+{
+	image_speed = 0
+	exit
+}
+else image_speed = 1
+
 // Check if the block has already been hit
 if (sprite_index == spr_coin_block_hit) && (y == initial_y) exit
 

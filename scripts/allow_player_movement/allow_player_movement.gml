@@ -5,11 +5,15 @@ function allow_player_movement()
 	down = keyboard_check(ord("S"))
 	right = keyboard_check(ord("D"))
 	left = keyboard_check(ord("A"))
-	select = keyboard_check(ord("E"))
-	start = keyboard_check(vk_enter)
+	select = keyboard_check_pressed(ord("E"))
+	start = keyboard_check_pressed(vk_enter)
 	b = keyboard_check(vk_shift)
 	a = keyboard_check(vk_space)
+	restart = keyboard_check(ord("R"))
 
+	// debug
+	if (restart) game_restart()
+	
 	// Deceleration
 	if ((!right) && (!left))
 	{
@@ -30,12 +34,6 @@ function allow_player_movement()
 	    {
 	        hsp = 0
 	    }
-	}
-
-	// Disable bunnyhopping
-	if (vsp > 0) && (a)
-	{
-	    a = 0
 	}
 
 	// Move right
