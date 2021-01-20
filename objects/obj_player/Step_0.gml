@@ -100,6 +100,7 @@ switch(state)
         {
             global.grav = 0
             global.mario_lives -= 1
+			global.exiting_bonus = false
             hsp = 0
             vsp = 0
             sprite_index = spr_mario_dead
@@ -171,7 +172,8 @@ if (place_meeting(x, y, parent_enemy))
     if (y < enemy.y+4) && (enemy.state != "DEAD")
     {
         audio_play_sound(EnemyStomp, 1, false)
-        vsp = -3
+		global.total_score += 100
+		vsp = -3
 		
         with(enemy)
         {
@@ -187,6 +189,9 @@ if (place_meeting(x, y, parent_enemy))
         if (global.powerup_state < 0) state = "DEAD"
     }
 }
+
+//Check if player has acquired checkpoint
+if (x > 1344) global.checkpoint_acquired = true
 
 // Room and HUD view control
 if (room = Level_1_1)

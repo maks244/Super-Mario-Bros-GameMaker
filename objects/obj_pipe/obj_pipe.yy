@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Other",
-    "path": "folders/Objects/Other.yy",
+    "name": "Pipes",
+    "path": "folders/Objects/Pipes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_pipe",

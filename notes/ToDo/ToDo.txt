@@ -1,5 +1,5 @@
 ToDo:
-- Add Score
+- Make background music loop
 - Add Top score
 - Add Powerups
 - Add Damage
@@ -9,3 +9,7 @@ ToDo:
 - Fix hud and coin blocks going out of sync when pausing the game
 - Stop coin animation when pausing the game (idea: instead of alarm use timer)
 - Add Controls instructions at start
+- Fix small jump that doesn't make player go into Jumping state
+- Fix timer not going down while spam pausing (could be fixed with a timer)
+- Add goomba death from block breaking
+- (OPTIONAL) Add that if you're falling you can stomp enemies like in the original 

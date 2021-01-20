@@ -12,6 +12,7 @@ if (sprite_index == spr_coin_block_hit) && (y == initial_y) exit
 // Checks if you collide with the bottom of a brick
 if (place_meeting(x, y+1, obj_player) && place_meeting(x, y+1, obj_follower))
 {
+	global.total_coins++
     bouncing = true
     obj_player.vsp = 1
     obj_player.jumpTime = 20

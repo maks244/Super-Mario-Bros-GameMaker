@@ -28,7 +28,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "HUD",
-    "path": "folders/Objects/Debug/HUD.yy",
+    "path": "folders/Objects/HUD.yy",
   },
   "resourceVersion": "1.0",
   "name": "draw_remaining_lives",

@@ -1,9 +1,6 @@
 // Stop if game is paused
 if (global.game_paused) exit
 
-// the x offset
-x_offset = __view_get(e__VW.XView, 0)
-
 // Time management
 if (set_alarm)
 {

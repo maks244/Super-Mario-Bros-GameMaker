@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_static_hud",
-    "path": "sprites/spr_static_hud/spr_static_hud.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -10,8 +7,8 @@
   "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
-  "physicsShape": 1,
-  "physicsGroup": 1,
+  "physicsShape": 0,
+  "physicsGroup": 0,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -20,7 +17,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"draw_total_score","path":"objects/draw_total_score/draw_total_score.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"parent":{"name":"draw_total_score","path":"objects/draw_total_score/draw_total_score.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -28,7 +28,7 @@
     "path": "folders/Objects/HUD.yy",
   },
   "resourceVersion": "1.0",
-  "name": "static_hud",
+  "name": "draw_total_score",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -1,4 +1,5 @@
 instance_create_depth(414, 682, -1, menu_mushroom)
+display_set_gui_size(255, 224);
 
 global.mario_lives = 3
 global.total_coins = 0
@@ -6,4 +7,4 @@ global.total_score = 0
 global.top_score = 0
 global.exiting_bonus = false
 global.game_paused = false
-
+global.checkpoint_acquired = false
