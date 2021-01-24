@@ -1,2 +1,1 @@
-global.time_left -= 1
-
+global.time_left -= 1

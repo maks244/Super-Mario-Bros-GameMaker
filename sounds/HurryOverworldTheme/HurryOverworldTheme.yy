@@ -7,11 +7,11 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "backgroundMusic",
+    "path": "audiogroups/backgroundMusic",
   },
-  "soundFile": "HurryOverworldTheme",
-  "duration": 42.7157936,
+  "soundFile": "HurryOverworldTheme.wav",
+  "duration": 25.5636044,
   "parent": {
     "name": "Background Music",
     "path": "folders/Sounds/Background Music.yy",

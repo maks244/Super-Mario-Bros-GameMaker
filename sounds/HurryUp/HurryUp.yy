@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "HurryUp",
-  "duration": 2.936333,
+  "soundFile": "HurryUp.wav",
+  "duration": 2.804208,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds/Sounds.yy",

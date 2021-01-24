@@ -7,11 +7,11 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "backgroundMusic",
+    "path": "audiogroups/backgroundMusic",
   },
-  "soundFile": "StarPower",
-  "duration": 11.0508127,
+  "soundFile": "StarPower.wav",
+  "duration": 10.9072714,
   "parent": {
     "name": "Background Music",
     "path": "folders/Sounds/Background Music.yy",

@@ -1,2 +1,2 @@
+timer = 0
 image = 0
-set_alarm = 1

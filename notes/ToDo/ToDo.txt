@@ -1,15 +1,7 @@
 ToDo:
-- Make background music loop
-- Add Top score
-- Add Powerups
-- Add Damage
-- Add Flagpole animation and win
-- Change kill block to: check y level
-- Fix weird sounding hurry up music
-- Fix hud and coin blocks going out of sync when pausing the game
-- Stop coin animation when pausing the game (idea: instead of alarm use timer)
-- Add Controls instructions at start
-- Fix small jump that doesn't make player go into Jumping state
-- Fix timer not going down while spam pausing (could be fixed with a timer)
-- Add goomba death from block breaking
-- (OPTIONAL) Add that if you're falling you can stomp enemies like in the original 
+- [Add] Powerups
+- [Add] Damage
+- [Add] Flagpole animation and win
+- [Add] goomba death from block breaking
+- (Optional) [Add] that if you're falling you can stomp enemies like in the original
+- [Fix] small jump that doesn't make player go into Jumping state

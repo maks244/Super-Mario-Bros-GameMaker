@@ -47,7 +47,7 @@
     "spriteId": {"name":"spr_static_hud","path":"sprites/spr_static_hud/spr_static_hud.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 1.0,
+    "playbackSpeed": 7.5,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

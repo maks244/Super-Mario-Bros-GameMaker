@@ -1,6 +1,5 @@
 // Stop if game is paused
-if (global.game_paused)
-{
+if (global.game_paused) {
 	image_speed = 0
 	exit
 }
@@ -10,8 +9,7 @@ else image_speed = 1
 if (sprite_index == spr_coin_block_hit) && (y == initial_y) exit
 
 // Checks if you collide with the bottom of a brick
-if (place_meeting(x, y+1, obj_player) && place_meeting(x, y+1, obj_follower))
-{
+if (place_meeting(x, y+1, obj_player) && place_meeting(x, y+1, obj_follower)) {
 	global.total_coins++
     bouncing = true
     obj_player.vsp = 1
@@ -21,12 +19,10 @@ if (place_meeting(x, y+1, obj_player) && place_meeting(x, y+1, obj_follower))
 }
 
 // Bouncing animation
-if (bouncing)
-{
+if (bouncing) {
     y -= 1
     if (y == initial_y - 8) bouncing = false
 }
-if (!bouncing)
-{
+if (!bouncing) {
     if (y != initial_y) y += 1
 }

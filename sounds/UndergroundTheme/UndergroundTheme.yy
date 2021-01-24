@@ -7,11 +7,11 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "backgroundMusic",
+    "path": "audiogroups/backgroundMusic",
   },
-  "soundFile": "UndergroundTheme",
-  "duration": 129.442444,
+  "soundFile": "UndergroundTheme.wav",
+  "duration": 14.38625,
   "parent": {
     "name": "Background Music",
     "path": "folders/Sounds/Background Music.yy",

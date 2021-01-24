@@ -1,17 +1,17 @@
 {
   "compression": 0,
-  "volume": 0.68,
+  "volume": 1.0,
   "preload": true,
   "bitRate": 320,
   "sampleRate": 48000,
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "backgroundMusic",
+    "path": "audiogroups/backgroundMusic",
   },
-  "soundFile": "OverworldTheme",
-  "duration": 129.490326,
+  "soundFile": "OverworldTheme.wav",
+  "duration": 76.67763,
   "parent": {
     "name": "Background Music",
     "path": "folders/Sounds/Background Music.yy",
