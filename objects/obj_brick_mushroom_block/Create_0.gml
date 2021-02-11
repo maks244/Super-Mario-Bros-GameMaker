@@ -1,3 +1,3 @@
 bouncing = false
-initial_y = y
-
+initial_y = y
+i = undefined

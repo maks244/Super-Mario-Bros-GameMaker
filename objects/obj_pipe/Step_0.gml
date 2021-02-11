@@ -6,5 +6,3 @@ if (position_meeting(x+16, y-1, obj_player)) && (obj_player.down) && (obj_player
     alarm[0] = room_speed * 1.2
     entered_once = true
 }
-
-

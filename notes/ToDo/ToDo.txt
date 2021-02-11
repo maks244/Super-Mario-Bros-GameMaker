@@ -1,7 +1,9 @@
 ToDo:
 - [Add] Powerups
 - [Add] Damage
+- [Add] Koopa
 - [Add] Flagpole animation and win
 - [Add] goomba death from block breaking
 - (Optional) [Add] that if you're falling you can stomp enemies like in the original
-- [Fix] small jump that doesn't make player go into Jumping state
+- [Fix] Jump speed (too fast)
+- [Fix] deceleration being too slow

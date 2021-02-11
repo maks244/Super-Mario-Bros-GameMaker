@@ -7,7 +7,7 @@
   "option_steam_app_id": "0",
   "option_sci_usesci": false,
   "option_author": "Maks Kuznia",
-  "option_lastchanged": "44211.4343283912",
+  "option_lastchanged": "25 January 2021 17:20:05",
   "option_spine_licence": false,
   "resourceVersion": "1.2",
   "name": "Main",

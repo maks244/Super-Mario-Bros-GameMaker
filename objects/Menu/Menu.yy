@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Menu",
-    "path": "folders/Objects/Menu.yy",
+    "name": "Screens",
+    "path": "folders/Objects/Screens.yy",
   },
   "resourceVersion": "1.0",
   "name": "menu",

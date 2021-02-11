@@ -1,7 +1,3 @@
-image_speed = 0.5
-vspeed = -3
-alarm[0] = 12
+vsp = -2.5
+timer = 0
 audio_play_sound(Coin, 1, false)
-global.total_score += 200
-
-

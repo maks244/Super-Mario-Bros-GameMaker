@@ -12,12 +12,15 @@ switch(state)
         if (last_direction = "LEFT") sprite_index = spr_s_mario_idle_l
         image_speed = 0
         last_state = "IDLE"
-        jump_sound_played = 2
 		
         allow_player_movement()
 		
         //Check inputs
-        if (a) state = "JUMPING"
+        if (a) {
+			state = "JUMPING"
+			if (jump_sound_timer = 0) audio_play_sound(Jump, 1, false)
+			jump_sound_timer++
+		}
         if (right) state = "RIGHT"
 		
         // Screen scroll stop check
@@ -33,13 +36,16 @@ switch(state)
         else sprite_index = spr_s_mario_walk_r
         image_speed = (abs(hsp))/4 * animationSpeed
 		if (vsp > 0) image_speed = 0
-        jump_sound_played = 2
 		
         allow_player_movement()
 		
         //Check inputs
         if (b) maxSpeed = 2.85 else maxSpeed = 2
-        if (a) && (vsp <= 0) state = "JUMPING"
+        if (a) && (vsp <= 0) {
+			state = "JUMPING"
+			if (jump_sound_timer = 0) audio_play_sound(Jump, 1, false)
+			jump_sound_timer++
+		}
         if (left) state = "LEFT"
         if (hsp = 0) state = "IDLE"
 		
@@ -53,13 +59,16 @@ switch(state)
         else sprite_index = spr_s_mario_walk_l
         image_speed = (abs(hsp))/4 * animationSpeed
 		if (vsp > 0) image_speed = 0
-        jump_sound_played = 2
 		
         allow_player_movement()
 		
         //Check inputs
         if (b) maxSpeed = 2.85 else maxSpeed = 2
-        if (a) && (vsp <= 0) state = "JUMPING"
+        if (a) && (vsp <= 0) {
+			state = "JUMPING"
+			if (jump_sound_timer = 0) audio_play_sound(Jump, 1, false)
+			jump_sound_timer++
+		}
         if (right) state = "RIGHT"
         if (hsp = 0) state = "IDLE"
 		
@@ -69,24 +78,28 @@ switch(state)
     {
         if (last_direction = "LEFT") sprite_index = spr_s_mario_jump_l
         if (last_direction = "RIGHT") sprite_index = spr_s_mario_jump_r
+		jump_sound_timer = 0
         image_speed = 0
-        jump_sound_played -= 1
 		
         allow_player_movement()
-
-        if (a) {
-            jumpTime += 1
-            if (jumpTime < 12) vsp = -jumpSpeed
-        }
-        else jumpTime = 20
-
-        if (place_meeting(x, y+1, parent_solid)) {
-            jumpTime = 0
-            state = last_state
-		}
 		
-        // Jump sound
-        if (jump_sound_played = 0) audio_play_sound(Jump, 1, false)
+		if (jump_timer < 2) {
+			jumpTime += 1
+			vsp = -jumpSpeed
+		}
+		else {
+	        if (a) {
+	            jumpTime += 1
+	            if (jumpTime < 13) vsp = -jumpSpeed
+	        }
+	        else jumpTime = 20
+	        if (place_meeting(x, y+1, parent_solid)) {
+	            jumpTime = 0
+				jump_timer = 0
+	            state = last_state
+			}
+		}
+		jump_timer++
 		
         break
     }
@@ -103,7 +116,7 @@ switch(state)
             audio_play_sound(Death, 1, false)
         }
 		
-        death_timer += 1
+        death_timer++
 		
         if (death_timer == room_speed/3) {
             // Death animation
@@ -152,11 +165,12 @@ if (vsp < 3.9) vsp += global.grav
 // Block collision check
 block_collision_and_movement()
 
-// Fallen out of level check
+// Death check (Fallen out of level / Killed)
 if (y >= 264) {
 	obj_player.state = "DEAD"
 	obj_player.visible = false
 }
+if (global.powerup_state < 0) state = "DEAD"
 
 // Enemy Collision check
 if (place_meeting(x, y, parent_enemy)) {
@@ -165,35 +179,44 @@ if (place_meeting(x, y, parent_enemy)) {
     // Collision from the top
     if (y < enemy.y+4) && (enemy.state != "DEAD") {
         audio_play_sound(EnemyStomp, 1, false)
-		global.total_score += 100
+		global.enemy_combo++
 		vsp = -3
 		
         with(enemy) {
+			draw_score_popup_enemy(x, y)
             state = "DEAD"
-            alarm[0] = room_speed * 0.5
+            alarm[0] = room_speed*0.5
         }
     }
 	
     // Collision from the sides
-    else {
-        global.powerup_state -= 1
-        if (global.powerup_state < 0) state = "DEAD"
-    }
+    else global.powerup_state -= 1
 }
+// Reset the enemy combo when touching the ground
+if (jumpTime = 0) global.enemy_combo = 0
 
 //Check if player has acquired checkpoint
 if (x > 1344) global.checkpoint_acquired = true
 
-// Room view control
-if (room = Level_1_1) {
+// Room view and score text control
+if (room != Level_1_1_Bonus) {
 	if (x < 3228) && (x > (__view_get(e__VW.XView, 0) + (__view_get(e__VW.WView, 0) * 0.475))) && (sign(hsp) = 1) {
 		__view_set(e__VW.XView, 0, __view_get(e__VW.XView, 0)+(hsp))
+		if (instance_exists(draw_popup_score_block)) draw_popup_score_block.x += hsp
+		if (instance_exists(draw_popup_score_enemy)) draw_popup_score_enemy.x += hsp
+		if (instance_exists(draw_popup_score_powerup)) draw_popup_score_powerup.x += hsp
 	}
 	else if (x < 3228) && (x > (__view_get(e__VW.XView, 0) + (__view_get(e__VW.WView, 0) * 0.42))) && (sign(hsp) = 1) {
         __view_set(e__VW.XView, 0, __view_get(e__VW.XView, 0)+(hsp/1.25))
+		if (instance_exists(draw_popup_score_block)) draw_popup_score_block.x += (hsp/1.25)
+		if (instance_exists(draw_popup_score_enemy)) draw_popup_score_enemy.x += (hsp/1.25)
+		if (instance_exists(draw_popup_score_powerup)) draw_popup_score_powerup.x += (hsp/1.25)
     }
     else if (x < 3228) && (x > (__view_get(e__VW.XView, 0) + (__view_get(e__VW.WView, 0) * 0.36))) && (sign(hsp) = 1) {
         __view_set(e__VW.XView, 0, __view_get(e__VW.XView, 0)+(hsp/1.5))
+		if (instance_exists(draw_popup_score_block)) draw_popup_score_block.x += (hsp/1.5)
+		if (instance_exists(draw_popup_score_enemy)) draw_popup_score_enemy.x += (hsp/1.5)
+		if (instance_exists(draw_popup_score_powerup)) draw_popup_score_powerup.x += (hsp/1.5)
     }
     if (x <= (__view_get( e__VW.XView, 0 ) + 8) && (sign(hsp) = -1)) hsp = 0
 }
