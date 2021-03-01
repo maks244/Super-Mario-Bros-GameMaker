@@ -1,1 +1,2 @@
-entered_once = false
+entered_pipe = false
+timer = 0

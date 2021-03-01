@@ -1,9 +1,12 @@
 ToDo:
 - [Add] Powerups
-- [Add] Damage
 - [Add] Koopa
 - [Add] Flagpole animation and win
-- [Add] goomba death from block breaking
-- (Optional) [Add] that if you're falling you can stomp enemies like in the original
+- [Add] Block breaking
+- [Add] Ducking animation
+- [Change] Bricks animation to match original
+- [Change] make it harder to move mid-air
 - [Fix] Jump speed (too fast)
-- [Fix] deceleration being too slow
+- [Fix] Screen stop check not working
+- [Fix] Bhopping
+

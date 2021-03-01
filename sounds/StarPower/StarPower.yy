@@ -11,7 +11,7 @@
     "path": "audiogroups/backgroundMusic",
   },
   "soundFile": "StarPower.wav",
-  "duration": 10.9072714,
+  "duration": 19.1730633,
   "parent": {
     "name": "Background Music",
     "path": "folders/Sounds/Background Music.yy",

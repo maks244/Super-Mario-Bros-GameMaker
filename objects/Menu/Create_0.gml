@@ -4,6 +4,11 @@ instance_create_depth(x, y, -10, draw_total_coins)
 instance_create_depth(x, y, -10, draw_total_score)
 instance_create_depth(x, y, -10, draw_top_score)
 audio_group_load(backgroundMusic)
+audio_group_load(ImportantSounds)
 
-global.mario_lives = 3
 global.checkpoint_acquired = false
+global.invincibility_timer = 0
+global.starpower_timer = 0
+global.starpower_timer_timer = 0
+global.pause_game_timer = 0
+global.mario_lives = 3

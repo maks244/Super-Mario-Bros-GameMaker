@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"08c1ad47-84e0-4977-bc28-57897065e60c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Other",
-    "path": "folders/Sprites/Other.yy",
+    "name": "Pipes",
+    "path": "folders/Sprites/Pipes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_pipe",

@@ -4,7 +4,7 @@ start = keyboard_check_pressed(vk_enter)
 
 if (select)
 {
-    if (state = "UP")
+    if (state == "UP")
     {
         state = "DOWN"
         y += 77
@@ -18,7 +18,7 @@ if (select)
 
 if (start)
 {
-    if (state = "UP")
+    if (state == "UP")
     {
 		global.total_coins = 0
 		global.total_score = 0

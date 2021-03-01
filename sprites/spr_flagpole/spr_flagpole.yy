@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4ba9c720-5bb1-4b6d-a15c-b48bf75a4d37","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Other",
-    "path": "folders/Sprites/Other.yy",
+    "name": "Flagpole",
+    "path": "folders/Sprites/Flagpole.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_flagpole",

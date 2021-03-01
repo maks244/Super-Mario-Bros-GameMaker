@@ -1,8 +1,13 @@
-if (entered_once = true) exit
-if (position_meeting(x+16, y-1, obj_player)) && (obj_player.down) && (obj_player.x >= 940) && (obj_player.x <= 948)
-{
+// Stop if game is paused
+if (global.game_paused || global.exiting_bonus) exit
+
+if (entered_pipe) {
+	if (timer == 72) room_goto(Level_1_1_Bonus)
+	timer++
+	exit
+}
+if (position_meeting(x+16, y-1, obj_player) && obj_player.down && obj_player.x >= 940 && obj_player.x <= 948) {
     audio_play_sound(Pipe, 1, false)
     obj_player.state = "ENTERING_PIPE"
-    alarm[0] = room_speed * 1.2
-    entered_once = true
+    entered_pipe = true
 }

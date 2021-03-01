@@ -1,10 +1,17 @@
 // Stop if game is paused
-if (global.game_paused) {
+if (global.game_paused || global.game_paused_on_timer) {
 	image_speed = 0
 	exit
 }
+
+// Delayed remove
+if (delayed_remove) {
+	if (timer == 30) instance_destroy()
+	timer++
+}
+
 // States
-switch(state) {
+switch (state) {
     case("DEACTIVATED"): {
         hsp = 0
 		image_speed = 0
@@ -25,19 +32,18 @@ switch(state) {
         sprite_index = spr_goomba_death
         // Movement
         hsp = 0
-		// Score
 		
         exit
     }
 }
 // Gravity
-if (vsp < 5) vsp += global.grav
+if (vsp < 5) vsp += grav
 
 // Collision
-block_collision_and_movement()
+object_collision_and_movement()
 
 // Turn around check
-if (place_meeting(x+hsp, y, parent_solid) or place_meeting(x+hsp, y, parent_enemy)) {
+if (place_meeting(x+hsp, y, parent_solid) || place_meeting(x+hsp, y, parent_enemy)) {
     dir *= -1
 }
 

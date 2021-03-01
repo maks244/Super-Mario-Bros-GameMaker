@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Other",
-    "path": "folders/Objects/Other.yy",
+    "name": "Flagpole",
+    "path": "folders/Objects/Flagpole.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_flagpole",

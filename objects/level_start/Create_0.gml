@@ -5,5 +5,7 @@ instance_create_depth(720, 523, -1, draw_remaining_lives)
 alarm[0] = room_speed * 2.5
 
 // Variables
-global.time_left = 401
 global.exiting_bonus = false
+global.time_left = 401
+global.powerup = 0
+
