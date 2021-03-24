@@ -40,20 +40,24 @@ function player_allow_movement()
 	    hsp = lerp(hsp, 0, acceleration)
 		if (hsp < 0.09 && hsp > -0.09) hsp = 0
 	}
-	if (x >= __view_get(e__VW.XView, 0)+8) {
-		// Move right
-		if (right && global.state != "DUCKING") {
-		    hsp += acceleration
-		    if (hsp >= maxSpeed) hsp = maxSpeed
-		}
-        
-		// Move left
-		if (left && global.state != "DUCKING") {
-			hsp -= acceleration
-		    if (hsp <= -maxSpeed) hsp = -maxSpeed
+	
+	// In-air deceleration
+	if (right || left) {
+		if (hsp < 1 && hsp > -1) {
+			if (!place_meeting(x, y+1, parent_solid) && jumpTime = 0) hsp = lerp(hsp, 0, acceleration*1.5)
+			if (jumpTime > 0) hsp = lerp(hsp, 0, acceleration*0.6)
 		}
 	}
-	else {
-		x = __view_get(e__VW.XView, 0)+9
+	
+	// Move right
+	if (right && global.state != "DUCKING") {
+		hsp += acceleration
+		if (hsp >= maxSpeed) hsp = maxSpeed
+	}
+        
+	// Move left
+	if (left && global.state != "DUCKING") {
+		hsp -= acceleration
+		if (hsp <= -maxSpeed) hsp = -maxSpeed
 	}
 }

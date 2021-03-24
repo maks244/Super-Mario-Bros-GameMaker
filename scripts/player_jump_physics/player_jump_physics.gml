@@ -1,8 +1,8 @@
 function player_jump_physics(){
 	if (jump_timer < 2) {
-			jumpTime += 1
-			vsp = -jumpSpeed
-		}
+		jumpTime += 1
+		vsp = -jumpSpeed
+	}
 	else {
 		if (a) {
 		    jumpTime += 1

@@ -11,6 +11,7 @@ global.flagpole_win = false
 global.flagpole_score = 0
 global.flagpole_touched = false
 global.fireworks = 0
+global.level_timer = 0
 global.exiting_bonus = false
 global.time_left = 401
 global.powerup = 0

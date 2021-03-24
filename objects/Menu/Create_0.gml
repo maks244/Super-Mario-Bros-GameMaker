@@ -3,6 +3,7 @@ instance_create_depth(x, y, 0, draw_static_hud)
 instance_create_depth(x, y, -10, draw_total_coins)
 instance_create_depth(x, y, -10, draw_total_score)
 instance_create_depth(x, y, -10, draw_top_score)
+instance_create_depth(x, y, -10, draw_top_level_time)
 audio_group_load(backgroundMusic)
 audio_group_load(ImportantSounds)
 

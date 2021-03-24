@@ -10,6 +10,9 @@ game_flagpole_timer()
 // Flag and fireworks
 background_win_sequence()
 
+// Level timer
+game_level_timer()
+
 // Make timer invisible in bonus room for first 25 frames
 if (entered_bonus) {
 	draw_remaining_time.visible = false

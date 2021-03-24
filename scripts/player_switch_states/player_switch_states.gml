@@ -9,7 +9,7 @@ function player_switch_states(player_state){
 			maxSpeed = 2
 			acceleration = 0.05
 		}
-		if (a && vsp == 0 && global.enemy_combo == 0) {
+		if (a_pressed && vsp == 0 && global.enemy_combo == 0) {
 			global.state = "JUMPING"
 			if (jump_sound_timer == 0) {
 				if (global.powerup >= 1) audio_play_sound(BigJump, 1, false)
@@ -24,7 +24,7 @@ function player_switch_states(player_state){
 	}
 	// Check inputs if player is idle
 	if (player_state == "IDLE") {
-        if (a) {
+        if (a_pressed) {
 			global.state = "JUMPING"
 			if (jump_sound_timer == 0) {
 				if (global.powerup >= 1) audio_play_sound(BigJump, 1, false)
@@ -39,7 +39,7 @@ function player_switch_states(player_state){
 	}
 	if (player_state == "DUCKING") {
 		if (!down || global.powerup = 0) global.state = last_state
-		if (a) {
+		if (a_pressed) {
 			global.state = "JUMPING"
 			if (jump_sound_timer == 0) {
 				if (global.powerup >= 1) audio_play_sound(BigJump, 1, false)
