@@ -5,7 +5,7 @@
   "option_windows_company_info": "MeCraft",
   "option_windows_product_info": "Super Mario Bros Game",
   "option_windows_copyright_info": "(c) 2021 MeCraft",
-  "option_windows_description_info": "Super Mario Bros for the NES emulator",
+  "option_windows_description_info": "Super Mario Bros for the NES",
   "option_windows_display_cursor": true,
   "option_windows_icon": "icons/icon.ico",
   "option_windows_save_location": 0,

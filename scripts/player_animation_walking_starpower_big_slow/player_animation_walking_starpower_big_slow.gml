@@ -1,15 +1,9 @@
 function player_animation_walking_starpower_big_slow(){
 	if (global.starpower_timer_timer = 0) {
-		if (global.powerup = 2) {
-			last_image = image_index
-			sprite_index = spr_f_mario_walk_starpower_0
-			image_index = last_image
-		}
-		else {
-			last_image = image_index
-			sprite_index = spr_b_mario_walk_starpower_0
-			image_index = last_image
-		}
+		last_image = image_index
+		if (global.powerup = 2) sprite_index = spr_f_mario_walk_starpower_0
+		else sprite_index = spr_b_mario_walk_starpower_0
+		image_index = last_image
 	}
 	if (global.starpower_timer_timer = 8) {
 		last_image = image_index

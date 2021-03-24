@@ -12,7 +12,7 @@ function popup_score_draw_enemy(x, y) {
 		case 7: enemy_score = Score4000; global.total_score += 4000; break;
 		case 8: enemy_score = Score5000; global.total_score += 5000; break;
 		case 9: enemy_score = Score8000; global.total_score += 8000; break;
-		default: enemy_score = ScoreOneUp; audio_play_sound(OneUp, 1, false); break;
+		default: enemy_score = ScoreOneUp; audio_play_sound(OneUp, 1, false); global.mario_lives++; break;
 	}
 	with (instance) add_score = enemy_score
 }

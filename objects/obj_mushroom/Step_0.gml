@@ -9,12 +9,13 @@ switch (state) {
 	}
 	case("APPEAR"): {
 		visible = true
-		if (timer = 48) state = "RUN"
+		if (timer = 48) state = "MOVE"
 		else y -= 0.25
 		timer++
 		exit
 	}
-	case("RUN"): {
+	case("MOVE"): {
+		depth = -2
 		hsp = dir * maxSpeed
 	}
 }
@@ -23,9 +24,9 @@ switch (state) {
 if (vsp < 5) vsp += grav
 
 // Collision
-object_collision_and_movement()
+object_collision_and_movement(id)
 
 // Turn around check
-if (place_meeting(x+hsp, y, parent_solid) || place_meeting(x+hsp, y, parent_enemy)) {
+if (place_meeting(x+hsp, y, parent_solid)) {
     dir *= -1
 }

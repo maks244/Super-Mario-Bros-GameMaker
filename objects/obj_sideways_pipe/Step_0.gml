@@ -15,14 +15,14 @@ if (entered_pipe) {
 		global.exiting_bonus = true
 	}
 	timer++
+	
 	exit
 }
+
 if (position_meeting(x-3, y+30, obj_player) && obj_player.right) {
     audio_play_sound(Pipe, 1, false)
-	with (obj_player) {
-	    state = "ENTERING_PIPE"
-	    y -= 0.5
-	}
+	global.state = "ENTERING_PIPE"
+	with (obj_player) y -= 1
 	walk_right_animation = true
     entered_pipe = true
 }

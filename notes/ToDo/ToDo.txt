@@ -1,12 +1,9 @@
 ToDo:
-- [Add] Powerups
-- [Add] Koopa
-- [Add] Flagpole animation and win
-- [Add] Block breaking
-- [Add] Ducking animation
-- [Change] Bricks animation to match original
-- [Change] make it harder to move mid-air
-- [Fix] Jump speed (too fast)
-- [Fix] Screen stop check not working
-- [Fix] Bhopping
-
+- [Fix] Screen stop check not working [p=3]
+- [Fix] Bhopping [p=3]
+- [Change] make it harder to move mid-air [p=1]
+- [Change] Bricks animation to match original [p=0]
+- [Fix] Jump speed (too fast) [p=0]
+- [Fix] Image speed getting lower when getting star while big [p=0]
+- [Add] Seperate game pause timer for getting powerup/damage etc so you can pause in those moments [p=0]
+- [Add] Clock for measuring how fast your run was [p=-1]

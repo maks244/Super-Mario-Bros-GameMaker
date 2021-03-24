@@ -1,12 +1,21 @@
 function player_animation_static(player_state){
 	if (global.starpower_timer > 0) {
 		if (global.powerup == 1) {
-			if (player_state == "JUMPING") sprite_index = spr_b_mario_jump_starpower
+			if (player_state == "JUMPING") {
+				if (duck_jump) sprite_index = spr_b_mario_duck_starpower
+				else sprite_index = spr_b_mario_jump_starpower
+			}
 			else if (player_state == "IDLE") sprite_index = spr_b_mario_idle_starpower
+			else if (player_state == "DUCKING") sprite_index = spr_b_mario_duck_starpower
 		}
 		else if (global.powerup == 2) {
-			if (player_state == "JUMPING") sprite_index = spr_f_mario_jump_starpower
+			if (firing_sprite) player_animation_firing()
+			else if (player_state == "JUMPING") {
+				if (duck_jump) sprite_index = spr_f_mario_duck_starpower
+				else sprite_index = spr_f_mario_jump_starpower
+			}
 			else if (player_state == "IDLE") sprite_index = spr_f_mario_idle_starpower
+			else if (player_state == "DUCKING") sprite_index = spr_f_mario_duck_starpower
 		}
 		else {
 			if (player_state == "JUMPING") sprite_index = spr_s_mario_jump_starpower
@@ -17,12 +26,21 @@ function player_animation_static(player_state){
 	}
 	else {
 		if (global.powerup == 1) {
-			if (player_state == "JUMPING") sprite_index = spr_b_mario_jump
+			if (player_state == "JUMPING") {
+				if (duck_jump) sprite_index = spr_b_mario_duck
+				else sprite_index = spr_b_mario_jump
+			}
 			else if (player_state == "IDLE") sprite_index = spr_b_mario_idle
+			else if (player_state == "DUCKING") sprite_index = spr_b_mario_duck
 		}
 		else if (global.powerup == 2) {
-			if (player_state == "JUMPING") sprite_index = spr_f_mario_jump
+			if (firing_sprite) player_animation_firing()
+			else if (player_state == "JUMPING") {
+				if (duck_jump) sprite_index = spr_f_mario_duck
+				else sprite_index = spr_f_mario_jump
+			}
 			else if (player_state == "IDLE") sprite_index = spr_f_mario_idle
+			else if (player_state == "DUCKING") sprite_index = spr_f_mario_duck
 		}
 		else {
 			if (player_state == "JUMPING") sprite_index = spr_s_mario_jump

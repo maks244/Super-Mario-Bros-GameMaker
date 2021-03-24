@@ -9,7 +9,7 @@ switch (state) {
 	}
 	case("APPEAR"): {
 		visible = true
-		if (timer = 48) state = "RUN"
+		if (timer = 48) state = "MOVE"
 		else y -= 0.25
 		timer++
 		exit

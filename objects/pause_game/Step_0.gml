@@ -1,1 +1,1 @@
-if (cooldown > 0) cooldown--
+if (global.pause_cooldown > 0) global.pause_cooldown--

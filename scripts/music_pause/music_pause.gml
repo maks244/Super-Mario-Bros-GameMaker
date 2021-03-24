@@ -7,5 +7,6 @@ function music_pause(){
 	if (audio_is_playing(StarPower)) audio_pause_sound(StarPower)
 	if (audio_is_playing(Death)) audio_pause_sound(Death)
 	if (audio_is_playing(Flagpole)) audio_pause_sound(Flagpole)
+	if (audio_is_playing(CoinCount)) audio_pause_sound(CoinCount)
 	audio_group_stop_all(audiogroup_default)
 }

@@ -12,7 +12,8 @@ function player_jump_physics(){
 		if (place_meeting(x, y+1, parent_solid)) {
 		    jumpTime = 0
 			jump_timer = 0
-		    state = last_state
+		    if (down && duck_jump) global.state = "DUCKING"
+			else global.state = last_state
 		}
 	}
 	jump_timer++

@@ -8,7 +8,10 @@ audio_group_load(ImportantSounds)
 
 global.checkpoint_acquired = false
 global.invincibility_timer = 0
-global.starpower_timer = 0
+global.firing_sprite_timer = 0
 global.starpower_timer_timer = 0
+global.starpower_timer = 0
 global.pause_game_timer = 0
+global.pause_cooldown = 0
+global.koopa_timer = 0
 global.mario_lives = 3

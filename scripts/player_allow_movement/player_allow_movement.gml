@@ -1,7 +1,6 @@
 function player_allow_movement() 
 {
 	// Input check
-	up = keyboard_check(ord("W"))
 	down = keyboard_check(ord("S"))
 	right = keyboard_check(ord("D"))
 	left = keyboard_check(ord("A"))
@@ -10,8 +9,8 @@ function player_allow_movement()
 	b = keyboard_check(vk_shift)
 	a = keyboard_check(vk_space)
 	a_pressed = keyboard_check_pressed(vk_space)
-	
-	// debug
+
+	// DEBUG
 	restart = keyboard_check(ord("R"))
 	if (restart) game_restart()
 	
@@ -25,8 +24,14 @@ function player_allow_movement()
 	}
 	
 	// Make stopping faster
-	if (state = "RIGHT" && hsp < 0) hsp += 0.05
-	if (state = "LEFT" && hsp > 0) hsp -= 0.05
+	if (global.state = "RIGHT" && hsp < 0) hsp += 0.05
+	if (global.state = "LEFT" && hsp > 0) hsp -= 0.05
+	
+	// Ducking deceleration
+	if (global.state = "DUCKING") {
+		if (hsp < 0) hsp += 0.05
+		if (hsp > 0) hsp -= 0.05
+	}
 	
 	// Disable being able to go left and right at the same time
 	if (right && left && jumpTime == 0) {
@@ -37,13 +42,13 @@ function player_allow_movement()
 	}
 	if (x >= __view_get(e__VW.XView, 0)+8) {
 		// Move right
-		if (right) {
+		if (right && global.state != "DUCKING") {
 		    hsp += acceleration
 		    if (hsp >= maxSpeed) hsp = maxSpeed
 		}
         
 		// Move left
-		if (left) {
+		if (left && global.state != "DUCKING") {
 			hsp -= acceleration
 		    if (hsp <= -maxSpeed) hsp = -maxSpeed
 		}

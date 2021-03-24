@@ -1,0 +1,1 @@
+if (global.flagpole_win && global.flagpole_timer < 59) y += 2.12

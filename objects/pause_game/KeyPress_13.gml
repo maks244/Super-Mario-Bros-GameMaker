@@ -1,1 +1,1 @@
-game_pause(cooldown)
+game_pause()

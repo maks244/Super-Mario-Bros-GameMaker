@@ -12,11 +12,14 @@ jumpSpeed = 4.1
 jumpTime = 0
 jump_timer = 0
 jump_sound_timer = 0
+duck_jump = false
 global.grav = 0.3
 
 // Animation
-if (place_meeting(x, y+1, parent_solid)) state = "IDLE"
-else state = "JUMPING"
+global.state = "IDLE"
+if (!place_meeting(x, y+1, parent_solid)) falling_sprite = true
+else falling_sprite = false
+firing_sprite = false
 animationSpeed = 0.5
 last_state = "IDLE"
 death_timer = 0
@@ -27,3 +30,4 @@ transform = undefined
 
 // Enemy
 global.enemy_combo = 0
+global.koopa_combo = 0

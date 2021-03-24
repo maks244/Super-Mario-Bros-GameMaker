@@ -9,15 +9,17 @@ if (room == Level_1_1) {
 			if (global.powerup >= 1) y = 192
 		    else y = 185
 			pipe_timer = -80
-		    state = "EXITING_PIPE"
 		}
+		global.state = "EXITING_PIPE"
 		__view_set( e__VW.XView, 0, 2576)
 	    draw_remaining_time.visible = false
 	}
 	// Check if the player has a checkpoint and teleport them to the right place
 	else if (global.checkpoint_acquired) {
-		x = 1344
-		y = 200
+		with (obj_player) {
+			x = 1344
+			y = 200
+		}
 		__view_set( e__VW.XView, 0, 1296)
 	}
 }
