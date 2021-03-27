@@ -8,10 +8,12 @@ maxSpeed = 2
 acceleration = 0.05
 
 // Jump
-jumpSpeed = 4.1
+jumpSpeed = 3.5
 jumpTime = 0
 jump_timer = 0
 jump_sound_timer = 0
+early_jump_input = false
+early_jump_expiry_timer = 0
 duck_jump = false
 global.grav = 0.3
 

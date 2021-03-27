@@ -1,5 +1,5 @@
 ToDo:
-- [Fix] Jump speed (too fast) [p=3]
 - [Change] Bricks animation to match original [p=0]
 - [Fix] Image speed getting lower when getting star while big [p=0]
 - [Add] Seperate game pause timer for getting powerup/damage etc so you can pause in those moments [p=0]
+- [Add] option to switch controls [p=0]

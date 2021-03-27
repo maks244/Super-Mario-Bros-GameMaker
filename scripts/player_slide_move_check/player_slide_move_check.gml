@@ -1,5 +1,5 @@
 function player_slide_move_check(x, y, hsp){
-	if (!instance_position(x-8, y+8, parent_solid)) {
+	if (!instance_position(x-8, y+8, parent_solid) && x >= __view_get(e__VW.XView, 0)+16) {
 		if (hsp < 0.4 && hsp > -0.4) {
 			if (position_meeting(x+2, y+17, obj_player)) player_slide_move(-6)
 			if (position_meeting(x, y+17, obj_player)) player_slide_move(-3)

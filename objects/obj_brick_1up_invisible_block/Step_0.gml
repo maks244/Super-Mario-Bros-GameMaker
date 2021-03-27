@@ -12,7 +12,7 @@ if (instance_position(x+4, y+17, obj_player) || instance_position(x+12, y+17, ob
 	if (instance_position(x+8, y+17, obj_follower) && obj_player.jumpTime < 19) {
 		bouncing = true
 		obj_player.vsp = 1.5
-		obj_player.jumpTime = 20
+		obj_player.jumpTime = 30
 		instance_create_depth(x, y-4, 2, obj_1up)
 		sprite_index = spr_coin_block_hit
 		visible = true

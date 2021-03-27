@@ -16,7 +16,7 @@ if (place_meeting(x, y+1, obj_player)) {
 			global.total_score += 200
 		    bouncing = true
 		    obj_player.vsp = 2
-		    obj_player.jumpTime = 20
+		    obj_player.jumpTime = 30
 		    sprite_index = spr_coin_block_hit
 		    instance_create_depth(x, y-20, -3, obj_block_coin)
 			

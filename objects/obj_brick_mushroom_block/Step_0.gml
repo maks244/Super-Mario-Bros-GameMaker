@@ -10,7 +10,7 @@ if (place_meeting(x, y+1, obj_player)) {
 		if (sprite_index == spr_brick_block) {
 			bouncing = true
 		    obj_player.vsp = 1.5
-		    obj_player.jumpTime = 20
+		    obj_player.jumpTime = 30
 		    sprite_index = spr_coin_block_hit
 			
 			// Create a mushroom or fireflower depending on the powerup

@@ -12,7 +12,7 @@ if (place_meeting(x, y+1, obj_player)) {
 			global.total_score += 200
 		    bouncing = true
 		    obj_player.vsp = 1.5
-		    obj_player.jumpTime = 20
+		    obj_player.jumpTime = 30
 			
 			// Coin control
 		    if (coins == 1) sprite_index = spr_coin_block_hit

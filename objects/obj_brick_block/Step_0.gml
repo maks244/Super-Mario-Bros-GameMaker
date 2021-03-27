@@ -9,7 +9,7 @@ if (place_meeting(x, y+1, obj_player)) {
 		
 	    bouncing = true
 	    obj_player.vsp = 1.5
-	    obj_player.jumpTime = 20
+	    obj_player.jumpTime = 30
 		
 		// If there's an enemy above the block, kill it
 		enemy = instance_place(x, y-16, obj_goomba)
