@@ -1,5 +1,5 @@
 function game_calculate_time_passed(type){
-	if (type = "AFTER_DEATH") global.current_time_string = "TIME:      " + global.current_level_time
+	if (type = "AFTER_DEATH") global.current_time_string = "BEST TIME: " + global.new_level_time
 	else {
 		if (global.level_timer > 3600) {
 			_level_time_minutes = floor((global.level_timer/3600))

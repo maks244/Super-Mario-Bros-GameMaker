@@ -11,13 +11,11 @@ timer2 = 0
 // Check if Mario has a set time after dying and show it
 if (global.top_level_timer != undefined && global.level_timer = 0) {
 	game_calculate_time_passed("AFTER_DEATH")
-	global.current_level_time = global.new_level_time
 	draw_time_after_death = true
 }
 
 // Check if game is started for the first time
 if (global.level_timer = 0) exit
-
 // Show new time after improving the old time
 else if (global.level_timer < global.top_level_timer || global.top_level_timer = undefined) {
 	// Animation and sound

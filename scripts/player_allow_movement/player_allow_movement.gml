@@ -9,10 +9,6 @@ function player_allow_movement()
 	b = keyboard_check(vk_shift)
 	a = keyboard_check(vk_space)
 	a_pressed = keyboard_check_pressed(vk_space)
-
-	// DEBUG
-	restart = keyboard_check(ord("R"))
-	if (restart) game_restart()
 	
 	// Deceleration
 	if (!right && !left && jumpTime == 0) {

@@ -29,7 +29,7 @@ function player_jump_physics(){
 			}
 		}
 		// Checks if player wants to jump before touching the ground
-		if (place_meeting(x, y+24, parent_solid) && a_pressed) {
+		if (place_meeting(x, y+32, parent_solid) && a_pressed) {
 			early_jump_input = true
 			early_jump_expiry_timer = 10
 		}
